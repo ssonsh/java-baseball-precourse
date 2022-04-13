@@ -42,4 +42,12 @@ public class BaseballNumbers {
             throw new IllegalArgumentException(ExceptionMessage.BASEBALL_NUMBER_IS_NOT_EMPTY);
         }
     }
+
+    public BaseballNumber getBallNumberByIdx(int idx) {
+        return this.baseballNumbers.get(idx);
+    }
+
+    public boolean contains(BaseballNumber baseballNumber) {
+        return this.baseballNumbers.contains(baseballNumber);
+    }
 }
