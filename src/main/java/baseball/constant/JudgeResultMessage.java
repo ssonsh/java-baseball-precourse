@@ -1,6 +1,10 @@
 package baseball.constant;
 
-public class JudgementResultMessage {
+public class JudgeResultMessage {
+
+    private JudgeResultMessage(){
+        throw new IllegalStateException("this is utility class");
+    }
 
     public static final String THREE_STRIKE = "3스트라이크";
     public static final String STRIKE_WITH_BALL = "%s볼 %s스트라이크";

@@ -1,6 +1,6 @@
 package baseball.view;
 
-import baseball.constant.JudgementResultMessage;
+import baseball.constant.JudgeResultMessage;
 import baseball.domain.referee.Ball;
 import baseball.domain.referee.Strike;
 
@@ -15,21 +15,21 @@ public class HintPrinter {
 
     public String printResult() {
         if (strike.getCount() == 3 && ball.getCount() == 0) {
-            return String.format(JudgementResultMessage.THREE_STRIKE);
+            return String.format(JudgeResultMessage.THREE_STRIKE);
         }
 
         if (strike.has() && ball.has()) {
-            return String.format(JudgementResultMessage.STRIKE_WITH_BALL, ball.getCount(), strike.getCount());
+            return String.format(JudgeResultMessage.STRIKE_WITH_BALL, ball.getCount(), strike.getCount());
         }
 
         if (!strike.has() && ball.has()) {
-            return String.format(JudgementResultMessage.ONLY_BALL, ball.getCount());
+            return String.format(JudgeResultMessage.ONLY_BALL, ball.getCount());
         }
 
         if (strike.has() && !ball.has()) {
-            return String.format(JudgementResultMessage.ONLY_STRIKE, strike.getCount());
+            return String.format(JudgeResultMessage.ONLY_STRIKE, strike.getCount());
         }
 
-        return JudgementResultMessage.NOTHING;
+        return JudgeResultMessage.NOTHING;
     }
 }

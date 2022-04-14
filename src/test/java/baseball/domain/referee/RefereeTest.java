@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import baseball.constant.JudgementResultMessage;
+import baseball.constant.JudgeResultMessage;
 import baseball.domain.BaseballNumbers;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,7 @@ class RefereeTest {
 
         // then
         assertTrue(referee.isPlay());
-        assertEquals(String.format(JudgementResultMessage.STRIKE_WITH_BALL, 1, 1), referee.judgeResultMessage());
+        assertEquals(String.format(JudgeResultMessage.STRIKE_WITH_BALL, 1, 1), referee.judgeResultMessage());
     }
 
 
@@ -65,7 +65,7 @@ class RefereeTest {
 
         // then
         assertTrue(referee.isPlay());
-        assertEquals(String.format(JudgementResultMessage.ONLY_BALL, 1), referee.judgeResultMessage());
+        assertEquals(String.format(JudgeResultMessage.ONLY_BALL, 1), referee.judgeResultMessage());
     }
 
     @Test
@@ -92,7 +92,7 @@ class RefereeTest {
 
         // then
         assertTrue(referee.isPlay());
-        assertEquals(String.format(JudgementResultMessage.ONLY_BALL, 2), referee.judgeResultMessage());
+        assertEquals(String.format(JudgeResultMessage.ONLY_BALL, 2), referee.judgeResultMessage());
     }
 
     @Test
@@ -119,7 +119,7 @@ class RefereeTest {
 
         // then
         assertTrue(referee.isPlay());
-        assertEquals(String.format(JudgementResultMessage.ONLY_STRIKE, 1), referee.judgeResultMessage());
+        assertEquals(String.format(JudgeResultMessage.ONLY_STRIKE, 1), referee.judgeResultMessage());
     }
 
 
@@ -147,7 +147,7 @@ class RefereeTest {
 
         // then
         assertFalse(referee.isPlay());
-        assertEquals(String.format(JudgementResultMessage.THREE_STRIKE), referee.judgeResultMessage());
+        assertEquals(String.format(JudgeResultMessage.THREE_STRIKE), referee.judgeResultMessage());
     }
 
 }
