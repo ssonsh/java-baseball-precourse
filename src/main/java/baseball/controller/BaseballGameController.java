@@ -1,10 +1,12 @@
 package baseball.controller;
 
+import baseball.constant.GamePlayMessage;
 import baseball.domain.BaseballNumbers;
 import baseball.domain.participant.Computer;
 import baseball.domain.referee.Referee;
 import baseball.generator.NumberGenerator;
 import baseball.view.PlayerBaseballNumberInput;
+import camp.nextstep.edu.missionutils.Console;
 import java.util.List;
 
 public class BaseballGameController {
@@ -26,8 +28,17 @@ public class BaseballGameController {
             List<Integer> playerInputNumbers = this.playerBaseballNumberInput.inputNumbers();
             BaseballNumbers playerBaseballNumbers = BaseballNumbers.of(playerInputNumbers);
 
+            referee.countClear();
             referee.judge(computer.getBaseballNumbers(), playerBaseballNumbers);
+        }
+        restartOrExist();
+    }
 
+    private void restartOrExist() {
+        System.out.println(GamePlayMessage.IS_CONTINUE);
+        String restartOrExist = Console.readLine();
+        if(restartOrExist.equals("1")){
+            play();
         }
     }
 }
