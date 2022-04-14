@@ -10,7 +10,6 @@ public class Referee {
     private Strike strike;
     private Ball ball;
     private HintPrinter hintPrinter;
-
     private JudgeStatus judgeStatus;
 
     private Referee() {
@@ -29,18 +28,18 @@ public class Referee {
         ball.judge(computerNumbers, playerNumbers);
 
         System.out.println(this.judgeResultMessage());
-        if(this.isGameComplete()){
-            System.out.println(GamePlayMessage.GAME_COMPLETE);
-        }
-        this.countClear();
+        gameOverCheck();
     }
 
-    private boolean isGameComplete() {
-        boolean isStrike3 = this.strike.getCount() == 3 && this.ball.getCount() == 0;
-        if(isStrike3){
+    private void gameOverCheck() {
+        if(this.isGameOver()){
+            System.out.println(GamePlayMessage.GAME_OVER);
             this.judgeStatus = JudgeStatus.GAME_OVER;
         }
-        return isStrike3;
+    }
+
+    private boolean isGameOver() {
+        return this.strike.getCount() == 3 && this.ball.getCount() == 0;
     }
 
     public String judgeResultMessage() {
