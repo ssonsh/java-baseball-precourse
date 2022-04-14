@@ -2,7 +2,7 @@ package baseball.constant;
 
 public class ExceptionMessage {
 
-    private ExceptionMessage(){
+    private ExceptionMessage() {
         throw new IllegalStateException("this is utility class");
     }
 

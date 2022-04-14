@@ -37,7 +37,7 @@ public class BaseballGameController {
     private void restartOrExist() {
         System.out.println(GamePlayMessage.IS_CONTINUE);
         String restartOrExist = Console.readLine();
-        if(restartOrExist.equals("1")){
+        if (restartOrExist.equals("1")) {
             play();
         }
     }

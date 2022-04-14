@@ -4,7 +4,7 @@ import baseball.domain.BaseballNumbers;
 import baseball.generator.NumberGenerator;
 import java.util.List;
 
-public class Computer{
+public class Computer {
 
     private final BaseballNumbers baseballNumbers;
 

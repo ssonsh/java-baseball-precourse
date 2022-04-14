@@ -2,7 +2,7 @@ package baseball.constant;
 
 public class JudgeResultMessage {
 
-    private JudgeResultMessage(){
+    private JudgeResultMessage() {
         throw new IllegalStateException("this is utility class");
     }
 

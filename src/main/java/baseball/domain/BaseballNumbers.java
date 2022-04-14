@@ -13,7 +13,7 @@ public class BaseballNumbers {
         this.baseballNumbers = baseballNumbers;
     }
 
-    public static BaseballNumbers of(List<Integer> numbers){
+    public static BaseballNumbers of(List<Integer> numbers) {
         List<BaseballNumber> results = new ArrayList<>();
         for (Integer number : numbers) {
             results.add(BaseballNumber.of(number));
@@ -32,13 +32,13 @@ public class BaseballNumbers {
     }
 
     private void availableSizeValidate(List<BaseballNumber> baseballNumbers) {
-        if(baseballNumbers.size() != BaseballNumberConstant.SIZE){
+        if (baseballNumbers.size() != BaseballNumberConstant.SIZE) {
             throw new IllegalArgumentException(ExceptionMessage.INVALID_BASEBALL_NUMBER_SIZE);
         }
     }
 
     private void emptyValidate(List<BaseballNumber> baseballNumbers) {
-        if(baseballNumbers.isEmpty()){
+        if (baseballNumbers.isEmpty()) {
             throw new IllegalArgumentException(ExceptionMessage.BASEBALL_NUMBER_IS_NOT_EMPTY);
         }
     }

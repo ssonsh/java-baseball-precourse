@@ -16,7 +16,7 @@ class BaseballNumbersTest {
 
     @Test
     @DisplayName("BaseballNumber 1급객체 생성 (정상)")
-    void generateBaseballNumbers(){
+    void generateBaseballNumbers() {
         // given
         // when
         NumberGenerator numberGenerator = new BaseballNumberGenerator();
@@ -28,7 +28,7 @@ class BaseballNumbersTest {
 
     @Test
     @DisplayName("BaseballNumber 1급객체 생성 (비정상) - 숫자 사이즈 초과")
-    void exceptionGenerateBaseballNumbers01(){
+    void exceptionGenerateBaseballNumbers01() {
         // give
         // when
         List<Integer> numbers = new ArrayList<>();
@@ -45,7 +45,7 @@ class BaseballNumbersTest {
 
     @Test
     @DisplayName("BaseballNumber 1급객체 생성 (비정상) - 빈 List 기반으로 생성")
-    void exceptionGenerateBaseballNumbers02(){
+    void exceptionGenerateBaseballNumbers02() {
         // given
         // when
         // then

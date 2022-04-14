@@ -32,7 +32,7 @@ public class Referee {
     }
 
     private void gameOverCheck() {
-        if(this.isGameOver()){
+        if (this.isGameOver()) {
             System.out.println(GamePlayMessage.GAME_OVER);
             this.judgeStatus = JudgeStatus.GAME_OVER;
         }

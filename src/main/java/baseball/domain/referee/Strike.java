@@ -21,8 +21,8 @@ public class Strike {
     }
 
     private void strikeCheck(boolean isStrike) {
-        if(isStrike){
-            this.count ++;
+        if (isStrike) {
+            this.count++;
         }
     }
 
